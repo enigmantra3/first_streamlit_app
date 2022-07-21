@@ -52,7 +52,7 @@ my_data_row = my_cur.fetchall()
 #streamlit.text("Hello from Snowflake:")
 streamlit.text("The fruit Load list (with user value appended) contains: ")
 #streamlit.text(my_data_row)
-my_data_row.append(fruit_choice2)
+my_data_row[0].append(fruit_choice2)
 streamlit.dataframe(my_data_row)
 
 
