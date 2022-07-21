@@ -50,23 +50,9 @@ my_cur.execute("SELECT * from fruit_load_list")
 #my_data_row = my_cur.fetchone()
 my_data_row = my_cur.fetchall()
 #streamlit.text("Hello from Snowflake:")
-streamlit.text("The fruit Load list contains: ")
+streamlit.text("The fruit Load list (with user value appended) contains: ")
 #streamlit.text(my_data_row)
+my_data_row.append(fruit_choice2)
 streamlit.dataframe(my_data_row)
-streamlit.dataframe(my_data_row.append(fruit_choice2))
-
-
-fruit_choice2 = streamlit.text_input('Add a fruit?','Kumquat')
-streamlit.write('The user entered ', fruit_choice2)
-my_data_row2 = my_data_row
-my_data_row3 = my_data_row2.append(fruit_choice2)
-streamlit.text(my_data_row2.append(fruit_choice2))
-streamlit.text(my_data_row3)
-  
-streamlit.text(type(my_data_row))
-streamlit.text(type(my_data_row2))
-streamlit.text(type(fruit_choice2))
-streamlit.dataframe(my_data_row2.append(fruit_choice2))
-streamlit.text(type(my_data_row2.append(fruit_choice2)))
 
 
