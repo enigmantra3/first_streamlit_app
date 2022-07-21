@@ -68,3 +68,4 @@ if streamlit.button('Get Fruit Load List'):
     my_data_rows = get_fruit_load_list()
     back_from_function = insert_row_snowflake(fruit_choice2.strip())
     streamlit.text(back_from_function)
+    streamlit.dataframe(my_data_rows)
