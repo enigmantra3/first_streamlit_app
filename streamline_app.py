@@ -61,10 +61,10 @@ try:
     streamlit.error("please select a fruit for info")
   else:
     streamlit.write('Adding fruit to list ', fruit_choice2)
-    insert_row_snowflake(fruit_choice2.strip())
 except URLError as e:
   streamlit.error(e)
 
 if streamlit.button('Get Fruit Load List'):
     my_data_rows = get_fruit_load_list()
-    streamlit.dataframe(my_data_rows)
+    back_from_function = insert_row_snowflake(fruit_choice2.strip())
+    streamlit.text(back_from_function)
