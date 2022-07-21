@@ -54,7 +54,9 @@ fruit_choice2 = streamlit.text_input('Add a fruit?','Kumquat')
 streamlit.write('The user entered ', fruit_choice2)
 my_data_row2 = my_data_row
 my_data_row3 = my_data_row2.append(fruit_choice2)
-
+streamlit.text(my_data_row2.append(fruit_choice2))
+streamlit.text(my_data_row3)
+  
 streamlit.text(type(my_data_row))
 streamlit.text(type(my_data_row2))
 streamlit.text(type(fruit_choice2))
