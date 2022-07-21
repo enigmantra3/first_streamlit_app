@@ -66,7 +66,7 @@ try:
         if len(fruit_choice2.strip()) > 0:
             back_from_function = insert_row_snowflake(fruit_choice2.strip())
             streamlit.text(back_from_function)
-        refresh_fruit_load_list()
+            refresh_fruit_load_list()
 except URLError as e:
     streamlit.error(e)
 
