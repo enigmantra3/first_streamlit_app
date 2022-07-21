@@ -55,8 +55,8 @@ def insert_row_snowflake(new_fruit):
 # if len(fruit_choice2) > 0:
 #   my_cur.execute("INSERT INTO fruit_load_list values ('" + fruit_choice2 + "')")
 
+fruit_choice2 = streamlit.text_input('What fruit would you like to add to list?','')
 try:
-  fruit_choice2 = streamlit.text_input('What fruit would you like to add to list?','')
   if streamlit.button('Add to Database'):
       if not fruit_choice2:
         streamlit.error("please select a fruit for info")
