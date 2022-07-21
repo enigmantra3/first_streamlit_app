@@ -4,7 +4,6 @@ import requests
 import snowflake.connector
 from urllib.error import URLError
 
-streamlit.stop()
 streamlit.title("My Parents' New Healthy Diner")
 streamlit.header("Breakfast Menu")
 streamlit.text("Eggs and Avocados")
@@ -41,7 +40,7 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # write your own comment - what does this do?
 streamlit.dataframe(fruityvice_normalized)
 
-
+streamlit.stop()
 fruit_choice2 = streamlit.text_input('Add a fruit?','')
 streamlit.write('The user entered ', fruit_choice2)
 
