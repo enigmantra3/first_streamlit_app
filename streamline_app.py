@@ -57,15 +57,16 @@ def insert_row_snowflake(new_fruit):
 
 try:
   fruit_choice2 = streamlit.text_input('What fruit would you like to add to list?','')
-  if not fruit_choice2:
-    streamlit.error("please select a fruit for info")
-  else:
-    streamlit.write('Adding fruit to list ', fruit_choice2)
-    if len(fruit_choice2.strip()) > 0:
-        back_from_function = insert_row_snowflake(fruit_choice2.strip())
-        streamlit.text(back_from_function)
-except URLError as e:
-  streamlit.error(e)
+  if streamlit.button('Add to Database'):
+      if not fruit_choice2:
+        streamlit.error("please select a fruit for info")
+      else:
+        streamlit.write('Adding fruit to list ', fruit_choice2)
+        if len(fruit_choice2.strip()) > 0:
+            back_from_function = insert_row_snowflake(fruit_choice2.strip())
+            streamlit.text(back_from_function)
+    except URLError as e:
+      streamlit.error(e)
 
 if streamlit.button('Get Fruit Load List'):
     my_data_rows = get_fruit_load_list()
