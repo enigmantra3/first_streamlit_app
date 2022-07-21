@@ -59,6 +59,6 @@ streamlit.text(type(my_data_row))
 streamlit.text(type(my_data_row2))
 streamlit.text(type(fruit_choice2))
 streamlit.dataframe(my_data_row2.append(fruit_choice2))
-streamlit.text(type(my_data_row2.append(fruit_choice2))
+streamlit.text(type(my_data_row2.append(fruit_choice2)))
 
 
