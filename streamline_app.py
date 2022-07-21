@@ -3,16 +3,10 @@ import pandas
 import requests
 import snowflake.connector
 
-
 streamlit.title("My Parents' New Healthy Diner")
-
 streamlit.header("Breakfast Menu")
-
 streamlit.text("Eggs and Avocados")
-
 streamlit.text("Shakshuka")
-
-
 streamlit.header('Breakfast Menu (Course)')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
 streamlit.text('🥗 Kale, Spinach & Rocket Smoothie')
@@ -58,10 +52,12 @@ streamlit.dataframe(my_data_row)
 
 fruit_choice2 = streamlit.text_input('Add a fruit?','Kumquat')
 streamlit.write('The user entered ', fruit_choice2)
+my_data_row2 = my_data_row
 my_data_row2 = my_data_row.append(fruit_choice2)
 
 streamlit.text(type(my_data_row))
 streamlit.text(type(my_data_row2))
-streamlit.dataframe(my_data_row2)
+streamlit.text(type(my_data_row2.append(fruit_choice2)))
+streamlit.dataframe(my_data_row2.append(fruit_choice2))
 
 
